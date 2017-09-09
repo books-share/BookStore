@@ -27,6 +27,7 @@ public class DBHelp {
 			try {
 				Class.forName(DB_DRIVER);
 				connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+				System.out.println(DB_URL);
 			} catch (ClassNotFoundException | SQLException exception) {
 				exception.printStackTrace();
 				return null;
